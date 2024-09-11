@@ -1,7 +1,7 @@
 # .NET-Commands
 common .NET commands needed to run solutions in VSCode
 
-## FROM IATC
+## From IATC
 
 > `dotnet new webapi -lang "c#" -n "S5L2-Sandbox" -f "net7.0" -o S5L2-Sandbox -d -v diag`
 
@@ -85,7 +85,7 @@ echo "Listing Solution Linked Projects.."
 dotnet sln list
 ```
 
-## FROM RC/AsyncAwait
+## From RC Async/Await
 
 `dotnet new gitignore`
 
