@@ -1,13 +1,17 @@
 # .NET-Commands
 Common .NET commands needed to run solutions in VSCode
 
-## From IATC
+## Summary
 
 > `dotnet new webapi -lang "c#" -n "S5L2-Sandbox" -f "net7.0" -o S5L2-Sandbox -d -v diag`
 
 - Note here, `.\` was not used when sepcifying output directory, usually, just -n is enough,
   it will automatically create directory, use -o if you want folder name to be different,
   or when grouping projects under specific folders.
+
+- simpler way of adding projects.
+  - `dotnet new webapi -n API --use-controllers`
+  - `dotnet new classlib -n Application`
 
 > `dotnet sln add S5L2-Sandbox/S5L2-Sandbox.csproj`
 
@@ -16,6 +20,19 @@ Common .NET commands needed to run solutions in VSCode
 > `dotnet run --project S5L2-Sandbox --launch-profile "https"`
 
 - the command already looks for .csproj file, so just passing the directory here is fine.
+
+> `dotnet watch --no-hot-reload --project .NET-Server/src/API run --environment "Development"`
+
+- another way to run, with hot reload.
+
+> `dotnet add API/API.csproj reference Application/Application.csproj`
+
+- adding reference.
+
+> `dotnet sln list`
+`dotnet restore`
+`dotnet --list-sdks`
+`dotnet --info`
 
 ## .NET Commands
 
@@ -86,19 +103,14 @@ dotnet sln list
 ```
 
 ## From RC Async/Await
-
-`dotnet new gitignore`
-
-`dotnet new sln`
-
-`dotnet new console -lang "c#" -n "One" -f "net8.0" -o src/First/one -d -v diag`
-
-`dotnet new console -lang "c#" -n "Twi" -f "net8.0" -o src/First/two -d -v diag`
-
-`dotnet new web -lang "c#" -n "Second" -f "net8.0" -o src/Second -d -v diag`
-
-`dotnet sln add src/First/one`
-
+```
+dotnet new gitignore
+dotnet new sln
+dotnet new console -lang "c#" -n "One" -f "net8.0" -o src/First/one -d -v diag
+dotnet new console -lang "c#" -n "Twi" -f "net8.0" -o src/First/two -d -v diag
+dotnet new web -lang "c#" -n "Second" -f "net8.0" -o src/Second -d -v diag
+dotnet sln add src/First/one
+```
 `dotnet sln add src/First/two`
 
 `dotnet sln add src/Second`
