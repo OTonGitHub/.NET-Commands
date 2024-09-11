@@ -1,5 +1,5 @@
 # .NET-Commands
-common .NET commands needed to run solutions in VSCode
+Common .NET commands needed to run solutions in VSCode
 
 ## From IATC
 
