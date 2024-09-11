@@ -1,7 +1,7 @@
 # .NET-Commands
 common .NET commands needed to run solutions in VSCode
 
-### FROM IATC
+## FROM IATC
 
 > `dotnet new webapi -lang "c#" -n "S5L2-Sandbox" -f "net7.0" -o S5L2-Sandbox -d -v diag`
 
@@ -17,28 +17,7 @@ common .NET commands needed to run solutions in VSCode
 
 - the command already looks for .csproj file, so just passing the directory here is fine.
 
-### FROM RC/AsyncAwait
-
-`dotnet new gitignore`
-
-`dotnet new sln`
-
-`dotnet new console -lang "c#" -n "One" -f "net8.0" -o src/First/one -d -v diag`
-
-`dotnet new console -lang "c#" -n "Twi" -f "net8.0" -o src/First/two -d -v diag`
-
-`dotnet new web -lang "c#" -n "Second" -f "net8.0" -o src/Second -d -v diag`
-
-`dotnet sln add src/First/one`
-
-`dotnet sln add src/First/two`
-
-`dotnet sln add src/Second`
-
-`dotnet run --project src/Second`
-
-
-### .NET Commands
+## .NET Commands
 
 - For commands to run for project setup, see `OT-ProjectSetup.sh`
 - Run startup project `dotnet run --project API`
@@ -105,3 +84,23 @@ echo -e "${green}Finished!${reset}"
 echo "Listing Solution Linked Projects.."
 dotnet sln list
 ```
+
+## FROM RC/AsyncAwait
+
+`dotnet new gitignore`
+
+`dotnet new sln`
+
+`dotnet new console -lang "c#" -n "One" -f "net8.0" -o src/First/one -d -v diag`
+
+`dotnet new console -lang "c#" -n "Twi" -f "net8.0" -o src/First/two -d -v diag`
+
+`dotnet new web -lang "c#" -n "Second" -f "net8.0" -o src/Second -d -v diag`
+
+`dotnet sln add src/First/one`
+
+`dotnet sln add src/First/two`
+
+`dotnet sln add src/Second`
+
+`dotnet run --project src/Second`
