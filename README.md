@@ -1,43 +1,70 @@
 # .NET-Commands
 Common .NET commands needed to run solutions in VSCode
 
+## Command Structure
+- <img src="https://github.com/user-attachments/assets/a44f6ada-3ec4-4e22-8c42-dfe303708914" width="450">
+
+  - <em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+- <img src="https://github.com/user-attachments/assets/808487e8-4647-4685-8036-d0ecb1072fa0" width="450">
+
+  - <em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+  - you can also pass arguments here.
+- for checking command usages, do `dotnet --help`
+  - this is a nested command, you can also `dotnet build --help`
+- you can list templates using `dotnet new list`
+  - search online (& local) templates `dotnet new list <fuzzy_search_input>`
+  - you can search by author too by passing `--author mariyam` or `--author="mariyam"`
+
 ## Summary
+
+> `dotnet new sln --name "BigProject"`
+
+- if `--name` is not specified, some convention is followed, just remove it using rm.
 
 > `dotnet new webapi -lang "c#" -n "S5L2-Sandbox" -f "net7.0" -o S5L2-Sandbox -d -v diag`
 
-- Note here, `.\` was not used when sepcifying output directory, usually, just -n is enough,
+- ^ Note here, `.\` was not used when sepcifying output directory, usually, just -n is enough,
   it will automatically create directory, use -o if you want folder name to be different,
   or when grouping projects under specific folders.
 
 - simpler way of adding projects.
   - `dotnet new webapi -n API --use-controllers`
   - `dotnet new classlib -n Application`
+  - `dotnet new console -o Playground`
+    - difference between using `-o` and `-n` is that, -n will autoamtiaclly create directory as same name.
+      There might be slight difference based on naming convention, no confirmed. But using -o Will specify output folder.
+      if -n is not specified, then same as folder is given to program. Just try it out.
 
 > `dotnet sln add S5L2-Sandbox/S5L2-Sandbox.csproj`
 
-- again, see how `.\` was omitted as we are in the same directory, this is different in windows.
+- ^ again, see how `.\` was omitted as we are in the same directory, this is different in windows.
 
 > `dotnet run --project S5L2-Sandbox --launch-profile "https"`
 
-- the command already looks for .csproj file, so just passing the directory here is fine.
+- ^ the command already looks for .csproj file, so just passing the directory here is fine.
 
 > `dotnet watch --no-hot-reload --project .NET-Server/src/API run --environment "Development"`
 
-- another way to run, with hot reload.
+- ^ another way to run, with hot reload.
 
 > `dotnet add API/API.csproj reference Application/Application.csproj`
 
-- adding reference.
+- ^ adding reference.
 
 > `dotnet sln list`
 `dotnet restore`
 `dotnet --list-sdks`
 `dotnet --info`
 
+- ^ common helpful commands.
+
 ## .NET Commands
 
 - For commands to run for project setup, see `OT-ProjectSetup.sh`
+- If you have 2 projects, just create sln and add projects to sln first.
 - Run startup project `dotnet run --project API`
+- You can run `.dll`'s directly, `dotnet MyProgram.dll`
+  - You may pass arguments here too, refer to image at top.
 - `dotnet add /workspaces/NETReact-Server/Persistence/Persistence.csproj package Microsoft.EntityFrameworkCore.Sqlite -v 8.0.1 -s https://api.nuget.org/v3/index.json `
   - adds reference in Persistence .csproj
 - to list available dotnet tools -> `dotnet tool list -g`
@@ -110,9 +137,7 @@ dotnet new console -lang "c#" -n "One" -f "net8.0" -o src/First/one -d -v diag
 dotnet new console -lang "c#" -n "Twi" -f "net8.0" -o src/First/two -d -v diag
 dotnet new web -lang "c#" -n "Second" -f "net8.0" -o src/Second -d -v diag
 dotnet sln add src/First/one
+dotnet sln add src/First/two
+dotnet sln add src/Second
+dotnet run --project src/Second
 ```
-`dotnet sln add src/First/two`
-
-`dotnet sln add src/Second`
-
-`dotnet run --project src/Second`
