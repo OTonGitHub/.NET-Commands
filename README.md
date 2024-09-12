@@ -1,21 +1,83 @@
 # .NET-Commands
 Common .NET commands needed to run solutions in VSCode
 
-## Command Structure
-- <img src="https://github.com/user-attachments/assets/a44f6ada-3ec4-4e22-8c42-dfe303708914" width="450">
+## Command Structure & Getting Started.
+<img src="https://github.com/user-attachments/assets/a44f6ada-3ec4-4e22-8c42-dfe303708914" width="450">
 
-  - <em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-- <img src="https://github.com/user-attachments/assets/808487e8-4647-4685-8036-d0ecb1072fa0" width="450">
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+<img src="https://github.com/user-attachments/assets/808487e8-4647-4685-8036-d0ecb1072fa0" width="450">
 
-  - <em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-  - you can also pass arguments here.
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+<img src="https://github.com/user-attachments/assets/da78a38a-6393-43c9-a0c9-e6bf811e47cd" width="450">
+> you can also pass arguments here.
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+<img src="https://github.com/user-attachments/assets/2dd19adc-f627-4161-9f6b-f4b78332fc33" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+
+![image](https://github.com/user-attachments/assets/39da4512-d438-46fd-9f30-5f8634258a54)
+
+![image](https://github.com/user-attachments/assets/e1246ffa-58a5-45f6-8c6a-101fcae89339)
+
+![image](https://github.com/user-attachments/assets/7a4fc1ec-06ac-4ac6-bd6f-dfb36ed6542c)
+
+![image](https://github.com/user-attachments/assets/dfe4c371-dd92-449c-9500-ba7dd6ecd569)
+
+![image](https://github.com/user-attachments/assets/0677e8bf-4883-4aa9-808f-ef3f34bfc589)
+
+![image](https://github.com/user-attachments/assets/c0d75ad1-7346-481a-a210-d4ec4166b788)
+
+### dotnet NEW
 - for checking command usages, do `dotnet --help`
   - this is a nested command, you can also `dotnet build --help`
 - you can list templates using `dotnet new list`
-  - search online (& local) templates `dotnet new list <fuzzy_search_input>`
+  - search local templates `dotnet new list <fuzzy_search_input>`
+- you can also search online templates using `dotnet new search "Clean Architecture"`
   - you can search by author too by passing `--author mariyam` or `--author="mariyam"`
+  - then install template via package name, like `dotnet new install Custom.Online.Template`
+  - This will install locally, now just create template like usual `dotnet new custom-template`
+- A very important argument that can be passed is `--dry-run` to well, do what it says.
+  - usage, `dotnet new gitignore --dry-run -v diag`
 
-## Summary
+### dotnet SLN
+- you can recursively add all projects to sln using `dotnet sln add **/*.csproj`
+- then do `dotnet sln list` to see all projects in solution.
+- you can add references using `add`, eg: `dotnet add Playground reference Playground2`
+  - adds `ItemGroup > ProjectReference#Include` in `.csproj` file
+- list all references of a project, `dotnet list Playground/ reference`
+- add package, `dotnet add Playground package Error  0r`
+- you can also list packages, using `dotnet list Playground/ package`
+
+
+### Nicities
+- `dotnet new gitignore`
+- `dotnet new globaljson`
+- `dotnet new editorconfig`
+  - to apply config, do `dotnet format` optionally with verbose `-v detailed`
+- `dotnet tool list` or globably with  `--global` (obviously, lol)
+- `dotnet tool install --global dotnetsay`
+  - excute `dotnetsay`
+
+#### Creating Own Tool
+- create new console app `dotnet new console -o Playground`
+- write it, run it.
+- in `.csproj` of project, add `PackAsTool` as True, to `PropertyGroup`
+  - set `ToolCommandName` in `PropertyGroup` as well, give some name.
+- do `dotnet pack -c Release -o CompanyToolAssets` or just "assets", whatever.
+  - should save as `.nupkg` in assets.
+- can install globally now using `dotnet tool install --global --add-source assets/ MyTool` or whatever folder name.
+- sayconf
+- use `dotnet tool run` to run local commands etc, very handy. Underused functions.
+- you can also search for tools `dotnet tool search dotnetsay` <fuzzy_input>
+- there is also a runtime option you can pass `--fx-version 7.0.0` to target another version.
+
+
+## Creating & Running (Common)
 
 > `dotnet new sln --name "BigProject"`
 
@@ -55,6 +117,7 @@ Common .NET commands needed to run solutions in VSCode
 `dotnet restore`
 `dotnet --list-sdks`
 `dotnet --info`
+`dotnet --list-runtimes`
 
 - ^ common helpful commands.
 
