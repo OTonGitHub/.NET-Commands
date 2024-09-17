@@ -1,49 +1,8 @@
 # .NET-Commands
 Common .NET commands needed to run solutions in VSCode
 
-## Command Structure & Getting Started.
-<img src="https://github.com/user-attachments/assets/a44f6ada-3ec4-4e22-8c42-dfe303708914" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-<img src="https://github.com/user-attachments/assets/808487e8-4647-4685-8036-d0ecb1072fa0" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-<img src="https://github.com/user-attachments/assets/da78a38a-6393-43c9-a0c9-e6bf811e47cd" width="450">
-> you can also pass arguments here.
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-<img src="https://github.com/user-attachments/assets/2dd19adc-f627-4161-9f6b-f4b78332fc33" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-
-<img src="https://github.com/user-attachments/assets/39da4512-d438-46fd-9f30-5f8634258a54" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-
-<img src="https://github.com/user-attachments/assets/e1246ffa-58a5-45f6-8c6a-101fcae89339" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-
-<img src="https://github.com/user-attachments/assets/7a4fc1ec-06ac-4ac6-bd6f-dfb36ed6542c" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-
-<img src="https://github.com/user-attachments/assets/0677e8bf-4883-4aa9-808f-ef3f34bfc589" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
-
-<img src="https://github.com/user-attachments/assets/c0d75ad1-7346-481a-a210-d4ec4166b788" width="450">
-
-<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
-<br><br><br>
+### Running .NET in VSCode
+- `ctrl + shift + p` -> .NET Generate Assets
 
 ### dotnet NEW
 - for checking command usages, do `dotnet --help`
@@ -217,3 +176,46 @@ dotnet sln add src/First/two
 dotnet sln add src/Second
 dotnet run --project src/Second
 ```
+
+## Command Structure & Getting Started.
+<img src="https://github.com/user-attachments/assets/a44f6ada-3ec4-4e22-8c42-dfe303708914" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+<img src="https://github.com/user-attachments/assets/808487e8-4647-4685-8036-d0ecb1072fa0" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+<img src="https://github.com/user-attachments/assets/da78a38a-6393-43c9-a0c9-e6bf811e47cd" width="450">
+> you can also pass arguments here.
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+<img src="https://github.com/user-attachments/assets/2dd19adc-f627-4161-9f6b-f4b78332fc33" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+
+<img src="https://github.com/user-attachments/assets/39da4512-d438-46fd-9f30-5f8634258a54" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+
+<img src="https://github.com/user-attachments/assets/e1246ffa-58a5-45f6-8c6a-101fcae89339" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+
+<img src="https://github.com/user-attachments/assets/7a4fc1ec-06ac-4ac6-bd6f-dfb36ed6542c" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+
+<img src="https://github.com/user-attachments/assets/0677e8bf-4883-4aa9-808f-ef3f34bfc589" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
+<br><br><br>
+
+<img src="https://github.com/user-attachments/assets/c0d75ad1-7346-481a-a210-d4ec4166b788" width="450">
+
+<em>Amichai Mantinband, 2022, YouTube, https://www.youtube.com/watch?v=gPoUSBnrYFU</em>
